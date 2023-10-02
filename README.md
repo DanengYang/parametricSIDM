@@ -6,6 +6,6 @@ This is a page in development, only some toy codes are available for references.
 To obtain the integral model prediction for the halo SIDM-796, run
 python getVRmaxplotISO.py
 
-A Mathematica notebook is designed for getting the SIDM prediction in the basic approach.
+A Mathematica notebook (basicHalos.nb) is designed for the basic approach. It can be used to obtain the density and velocity dispersion profiles in SIDM for a single halo. 
 
 
