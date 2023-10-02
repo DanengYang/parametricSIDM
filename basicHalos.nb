@@ -88,7 +88,6 @@ rhoSIDM[r_, Mvir_, n_(*0 for median concentration*)] :=
   tform = 14 - tL[zf];
   tc0 = tc[rhos, rs, sigmaeff];
   tr = tform/tc0;
-  tr = 0.38;
   rhost[tr, 
     rhos]/((r^4 + rct[tr, rs]^4)^(1/4)/
       rst[tr, rs] (1 + r/rst[tr, rs])^2)
