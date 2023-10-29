@@ -49,7 +49,7 @@ def sigmaVis(v,sigma0,w):
 
 def sigmaeff(veff,sigma0,w):
       fint = lambda lnv:pow(np.exp(lnv),7)*np.exp(-pow(np.exp(lnv),2)/(4*pow(veff,2)))*(2/3)*sigmaVis(np.exp(lnv),sigma0,w)*np.exp(lnv)
-      val=scipy.integrate.quad(fint, np.log(0.01), np.log(2000)) # up to 2000 km/s, sufficient for MW scale study!  
+      val=scipy.integrate.quad(fint, np.log(0.01), np.log(15000)) # up to 15000 km/s, sufficient for realistic halos
       return val[0]/(512*pow(veff,8))
 
 fig = plt.figure()
