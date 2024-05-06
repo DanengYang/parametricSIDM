@@ -7,7 +7,10 @@
 
 ### Example applications
 
-- Plot the parametric SIDM density profile ($ python demo.py) 
+- Plot the parametric SIDM density profile 
+  ```
+  $ python demo.py
+  ```
 
 <img src="https://github.com/DanengYang/parametricSIDM/blob/main/figs/demo.png" alt="Illustrate the parametric SIDM density profile" width="300"/>
 
@@ -15,7 +18,7 @@
 - The Mathematica notebook (basicHalos.nb) is tailored for the basic approach, allowing users to obtain density and velocity dispersion profiles in SIDM for individual halos.
 
 - Applying the integral approach requires information about the evolution histories. We provide an example application for the SIDM-796 halo. 
-Run ($ python getVRmaxplotISO.py) will generate the following figure
+Run (`$ python getVRmaxplotISO.py`) will generate the following figure
 
 <img src="https://github.com/DanengYang/parametricSIDM/blob/main/figs/fig_tL_vmax_case_cdm_799_796_C4_1000bins.png" alt="The Vmax evolution of a deeply core collapsing SIDM subhalo from the parametric model with the integral approach (solid-green), basic approach (dotted-blue), and the SIDM simulation (solid-magenta), as well as the CDM counterpart (dashed-black).
 " width="300"/>
@@ -28,8 +31,7 @@ Run ($ python getVRmaxplotISO.py) will generate the following figure
    $ python plotHybridVmaxRmaxSIDMwithbaryon_sigma0_100_w_100_DMO.py
    $ python plotHybridVmaxRmaxSIDMwithbaryon_SIDM_sigma0_100_w_100_total.py
    ```
-<img src="https://github.com/DanengYang/parametricSIDM/blob/main/figs/fig_vmax_rmax_SIDM_baryon_flat_HMF_sigma0_100_w_100_DMO.png" alt="The Vmax-Rmax distribution of the dark matter component for the velocity-dependent SIDM model" width="300"/>
-<img src="https://github.com/DanengYang/parametricSIDM/blob/main/figs/fig_vmax_rmax_SIDM_baryon_flat_HMF_sigma0_100_w_100.png" alt="The Vmax-Rmax distribution of dark matter plus baryons for the velocity-dependent SIDM model" width="300"/>
+<img src="https://github.com/DanengYang/parametricSIDM/blob/main/figs/fig_vmax_rmax_SIDM_baryon_flat_HMF_sigma0_100_w_100_DMO.png" alt="The Vmax-Rmax distribution of the dark matter component for the velocity-dependent SIDM model" width="300"/><img src="https://github.com/DanengYang/parametricSIDM/blob/main/figs/fig_vmax_rmax_SIDM_baryon_flat_HMF_sigma0_100_w_100.png" alt="The Vmax-Rmax distribution of dark matter plus baryons for the velocity-dependent SIDM model" width="300"/>
 
 - Getting SIDM predictions for the generated samples: Integral approach (exemplified through 14 points, adjust for processing more)
    ```bash
