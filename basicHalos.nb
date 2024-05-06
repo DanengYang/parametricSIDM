@@ -95,8 +95,17 @@ rhoSIDM[r_, Mvir_, n_(*0 for median concentration*)] :=
 
 (*--------------------------------------------------------------------------*)
 LogLogPlot[{rhoNFW[r, 10^9(*Msun*), 1(*sigma, 
-   deviation from std distribution*)], rhoSIDM[r, 10^9, 1]}, {r, 0.1, 
-  10}]
+      deviation from std distribution*)], rhoSIDM[r, 10^9, 1]}, {r, 
+  0.1, 
+    10}, Frame -> True, 
+   FrameLabel -> {"r (kpc)", 
+       "\[Rho](r) (\!\(\*SubscriptBox[\(M\), \
+\(\[Sun]\)]\)/\!\(\*SuperscriptBox[\(kpc\), \(3\)]\))"}, 
+   PlotLegends -> Placed[{"CDM", "SIDM"}, {0.2, 0.3}],
+   PlotStyle -> {Blue, Red, Darker[Green], Orange}, 
+   LabelStyle -> {FontSize -> 14, FontFamily -> "Times", 
+       FontColor -> Black}, AspectRatio -> 1, 
+   FrameStyle -> Thickness[.003]]
 
 
 (*--------------------------------------------------------------------------*)

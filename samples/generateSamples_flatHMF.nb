@@ -1,0 +1,82 @@
+nhalos = 1000;
+DistM0 = ProbabilityDistribution[
+   1, {x, 9, 
+    14}];(*Mass range from 10^9 Msun to 10^14 Msun*)
+\
+(*SeedRandom[234];*)
+
+dataIDX = RandomVariate[DistM0, nhalos, WorkingPrecision -> 40];
+data = Power[10, dataIDX];
+
+G = 43007.3/10^10;
+h = 0.6774;
+Omegam0 = 0.3089;
+Omegab0 = 0.0486;
+sigma8 = 0.8116;
+Omegar0 = 5.3815 10^-5;
+Omegak0 = 0;
+OmegaL0 = 1. - Omegam0;
+H0 = h/9.777752;(*Gyr^-1*)
+
+Ez[z_] := \[Sqrt](OmegaL0 + Omegak0 (1 + z)^2 + Omegam0 (1 + z)^3 + 
+     Omegar0 (1 + z)^4);
+OmegaL[z_] := OmegaL0/Ez[z]^2
+OmegaM[z_] := (Omegam0 (1 + z)^3)/Ez[z]^2
+
+velConversion = 0.9784690512430236`;
+rhoc0 = ((3 H0^2)/(8 \[Pi] G)) (velConversion)^2;
+rhocz[z_] := ((3)/(8 \[Pi] G)) (velConversion)^2  H0^2 Ez[z]^2;
+DeltaVir[z_] := (18 \[Pi]^2 + 82 (OmegaM[z] - 1) - 
+    39 (OmegaM[z] - 1)^2);
+rhohbar[z_] := 
+  DeltaVir[z] (3 H0^2 Ez[z]^2)/(8 \[Pi] G) (velConversion)^2;
+rhoc200[z_] := 200 (3 H0^2 Ez[z]^2)/(8 \[Pi] G) (velConversion)^2;
+rvir[z_, Mvir_] := ((3 Mvir)/(4 \[Pi] rhohbar[z]))^(1/3);
+r200[z_, M200_] := ((3 M200)/(4 \[Pi] rhoc200[z]))^(1/3);
+fNFW[x_] := Log[1 + x] - x/(1 + x);
+rhoNFW[r_, rhos_, rs_] := rhos/((r/rs) (1 + r/rs)^2)
+PhiNFW[r_, rhos_, rs_] := -4 \[Pi] G rhos rs^3 Log[1 + r/rs]/r;
+MtotNFW[r_, rhos_, rs_] := 
+  4 \[Pi] rhos rs^3 (-1 + rs/(r + rs) - Log[rs] + Log[r + rs]);
+VmaxNFW[rhos_, rs_] := 1.648 Sqrt[G rhos rs^2];
+rvmax[rs_] := 2.1626 rs;
+
+frhos[mvir_, rvir_, rs_] := 
+ mvir/(4*3.141593*
+    rs^3*(-1 + rs/(rvir + rs) - Log[rs] + Log[rvir + rs]))
+dataMvir = Table[data[[a]], {a, 1, Length[data]}];
+dataRvir = 
+  Table[(3/(4 \[Pi] rhohbar[0]) dataMvir[[a]])^(
+   1/3), {a, 1, Length[data]}];(*kpc*)
+
+distLL = RandomVariate[
+   ProbabilityDistribution[
+    PDF[LogNormalDistribution[0, 0.2532843602293451`], x], {x, 0.01, 
+     100}], nhalos];
+dataRs = Table[
+   dataRvir[[
+     a]]/(10^1.025 (dataMvir[[a]]/(
+       10^12/h))^-0.097 (distLL[[a]])), {a, 1, Length[dataRvir]}];
+dataRmax = Table[dataRs[[a]] 2.1626, {a, 1, Length[data]}];
+dataRhos = 
+  Table[Re[frhos[dataMvir[[a]], dataRvir[[a]], dataRs[[a]]]], {a, 1, 
+    Length[data]}];
+dataR200 = 
+  Table[r200x /. 
+    FindRoot[((4 \[Pi])/3 rhoc200[0] r200x^3) == 
+      MtotNFW[r200x, dataRhos[[a]], dataRs[[a]]], {r200x, 
+      dataRvir[[a]]}], {a, 1, Length[data]}];(*kpc*)
+
+dataVmax = 
+  Table[1.648 Sqrt[G Abs[dataRhos[[a]]]] dataRs[[a]], {a, 1, 
+    Length[data]}];
+dataCs = Table[dataRvir[[a]]/dataRs[[a]], {a, 1, Length[data]}];
+dataC200 = Table[dataR200[[a]]/dataRs[[a]], {a, 1, Length[data]}];
+dataM200 = 
+  Table[((4 \[Pi])/3 rhoc200[0] dataR200[[a]]^3), {a, 1, 
+    Length[data]}];
+Export["tab_vmax_rmax_lognormal_flathmf_lognormalc_n1000.dat", 
+ Table[Abs[{dataVmax[[a]], dataRmax[[a]], dataCs[[a]], dataMvir[[a]], 
+    dataRvir[[a]], dataRs[[a]], dataR200[[a]], dataC200[[a]], 
+    dataM200[[a]]}], {a, 1, Length[data]}]]
+
