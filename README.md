@@ -8,7 +8,7 @@ Parametric Model Analysis Tool for Self-Interacting Dark Matter Halos
 
 ### Example applications
 
-- <img src="https://github.com/DanengYang/parametricSIDM/blob/main/figs/demo.png" alt="Illustrate the parametric SIDM density profile" width="300"/>
+- Plot the parametric SIDM density profile (`$ python demo.py) <img src="https://github.com/DanengYang/parametricSIDM/blob/main/figs/demo.png" alt="Illustrate the parametric SIDM density profile" width="300"/>
 
 
 - The Mathematica notebook (basicHalos.nb) is tailored for the basic approach, allowing users to obtain density and velocity dispersion profiles in SIDM for individual halos.
