@@ -32,9 +32,9 @@ nstep=210./6
 data1 = np.genfromtxt('cdm/data_799_cdm.txt', names=True)
 data2 = np.genfromtxt('sidm/data_796_vd100.txt', names=True)
 # MW analogs
-data3 = np.genfromtxt('dataMAH416CDM.txt', names=True)
-data4 = np.genfromtxt('dataMAH416VD100.txt', names=True)
-dataM = np.genfromtxt('mathcingresultsVD100.txt', names=True)
+data3 = np.genfromtxt('cdm/dataMAH416CDM.txt', names=True)
+data4 = np.genfromtxt('sidm/dataMAH416VD100.txt', names=True)
+#dataM = np.genfromtxt('mathcingresultsVD100.txt', names=True)
 sidmid=796
 cdmid=799
 
@@ -178,6 +178,6 @@ plt.gca().invert_xaxis()
 #plt.yscale('log')
 
 plt.show()
-fig.savefig('fig_tL_vmax_case_cdm_'+str(cdmid)+'_'+str(sidmid)+'_C4_1000bins.png', bbox_inches='tight')
-#fig.savefig('fig_tL_vmax_case_cdm_'+str(cdmid)+'_'+str(sidmid)+'_Read_10000bins.png', bbox_inches='tight')
+fig.savefig('figs/fig_tL_vmax_case_cdm_'+str(cdmid)+'_'+str(sidmid)+'_C4_1000bins.png', bbox_inches='tight')
+#fig.savefig('figs/fig_tL_vmax_case_cdm_'+str(cdmid)+'_'+str(sidmid)+'_Read_10000bins.png', bbox_inches='tight')
 
