@@ -2,8 +2,9 @@
 
 ### Relevant publications 
 
-- Dark matter-only version: arXiv:2305.16176, published in [JCAP 02, 032 (2024)](http://dx.doi.org/10.1088/1475-7516/2024/02/032)
+- Dark matter-only version: [D. Yang, E. O. Nadler, H.-B. Yu, and Y.-M. Zhong, arXiv:2305.16176](https://arxiv.org/abs/2305.16176), published in [JCAP 02, 032 (2024)](http://dx.doi.org/10.1088/1475-7516/2024/02/032)
 - Dark matter plus baryon version: arXiv:24XX.XXXX
+- Our method has been implemented in the [SASHIMI program for SIDM subhalos](https://github.com/shinichiroando/sashimi-si): [S. Ando, S. Horigome, E. O. Nadler, D. Yang, and H.-B. Yu, arXiv:2403.16633](https://arxiv.org/abs/2403.16633)
 
 ### Example applications
 
@@ -41,4 +42,5 @@ Run (`$ python getVRmaxplotISO.py`) will generate the following figure
    ```
 
 Our codes are free to copy and modify. If you find them useful, please quote our paper(s). 
+If you have any questions or comments, please contact [danengy_at_ucr.edu].
 
