@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 import re
+import os
 import math
 import statistics
 from matplotlib.colors import LogNorm
@@ -135,7 +136,9 @@ def calc_values(Vmax, Rvmax, c200, cvir, Mvir, horder):
    return horder, vmax1, rmax1, cvir, c200, rss, trx, rhoH, rH 
 ######################################################################################
 
-pool = Pool(processes=14)
+num_cpus = os.cpu_count()
+pool = Pool(processes=num_cpus) # specify number of CPUs here
+#pool = Pool(processes=14)
 np.random.seed(123456)
 horder = np.arange(1, len(hvmax) + 1)
 
@@ -162,9 +165,6 @@ fig, ax = plt.subplots()
 ax.set_xlabel(r"$V_{\rm max,DM}\rm \ (km/s)$",fontsize=20)
 ax.set_ylabel(r"$R_{\rm max,DM}\rm \ (kpc)$",fontsize=20)
 
-#-------------------------------------------
-mmin=0 
-h=0.6774
 #-------------------------------------------
 
 plt.scatter(hvmax1,   hrvmax1,  s=32,c=htr1,cmap='coolwarm',linewidth=0.1)

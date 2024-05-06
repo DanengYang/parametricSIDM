@@ -132,6 +132,7 @@ def rhoDZcore(r,c200,rss,tr,rhoH,rH): # Eq.11, 2004.08395
    tb= 1/((rhoss)*2.09e-10)*pow(4*3.141593*GG*(rhoss*rss*rss),-0.5)
    ratio=ta/tb
    #-------------------------------------
+   # http://arxiv.org/abs/2004.08395
    r1=0.01*Rvir
    s1DMO= -(pow(r1,2.0)*pow(rhoss,-1.0)*pow(rss,-1.0)*(-2.*rhoss*pow(r1,-1.)*pow(1. + r1*pow(rss,-1.),-3.) -
        rhoss*rss*pow(r1,-2.)*pow(1. + r1*pow(rss,-1.),-2.))*pow(1. + r1*pow(rss,-1.),2.))
@@ -168,8 +169,6 @@ def rhoDZcore(r,c200,rss,tr,rhoH,rH): # Eq.11, 2004.08395
       ac_cache[cache_key] = (a, c)
    #print('DZ parameters: ',r,a,c)
    #--------------------------------------------------------------
-   #a=(1.5*s1-2.*(3.5-s1)*np.sqrt(0.01)*np.sqrt(c2))/(1.5-(3.5-s1)*np.sqrt(0.01)*np.sqrt(c2))
-   #c=((s1-2.)/((3.5-s1)*np.sqrt(0.01)-1.5/np.sqrt(c2)))**2
    a=min(2.8,a) # a cannot be greater than 3..........
    c=max(1,c) # c cannot be lower than 1..............
    rx0 = float(Rvir)/c
