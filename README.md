@@ -1,4 +1,4 @@
-# Parametric Model Analysis Tool for Self-Interacting Dark Matter Halos
+# Parametric Model Analysis Tools for Self-Interacting Dark Matter Halos
 
 ### Relevant publications 
 
