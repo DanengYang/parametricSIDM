@@ -60,7 +60,7 @@ plt.ylabel(r"$V_{\rm max}\ \rm (km/s)$",fontsize=22)
 zf=-0.0064*pow(np.log10(data1['mvir'][0]/h),2)+0.0237*np.log10(data1['mvir'][0]/h)+1.8837
 tform=14-1.*tlb(zf)
 tform=0.5*tform
-tbins=np.linspace(0,14,10000)
+tbins=np.linspace(0,14,1000)
 te=14-tform-tbins
 te[te<0]=0
 plt.plot(tlb(1/data2['scale']-1), data2['vmax'], '-',linewidth=3,color='m')
@@ -163,6 +163,8 @@ tr2=tsigma/tc0
 if(tr2>1.): tr2=1.
 print(cdmid,sidmid,data1['vmax'][0],data1['rvmax'][0]/h,data1['rvir'][0]/h,data2['vmax'][0],data2['rvmax'][0]/h,vmaxt(tr2,rhoss,rss),rmaxt(tr2,rhoss,rss),vmax1,rmax1,tr2,trx,rhoss1,rss1,rc1,rt1,tr1)
 
+plt.legend(['SIDM','CDM','Integral model','Basic model'],loc='lower right',fontsize=20)
+
 ax = fig.gca()
 
 ax.text(0.1, 0.85, r"CDM-"+str(cdmid)+"\nSIDM-"+str(sidmid), transform=ax.transAxes, fontsize=22,
@@ -179,5 +181,4 @@ plt.gca().invert_xaxis()
 
 plt.show()
 fig.savefig('figs/fig_tL_vmax_case_cdm_'+str(cdmid)+'_'+str(sidmid)+'_C4_1000bins.png', bbox_inches='tight')
-#fig.savefig('figs/fig_tL_vmax_case_cdm_'+str(cdmid)+'_'+str(sidmid)+'_Read_10000bins.png', bbox_inches='tight')
 
