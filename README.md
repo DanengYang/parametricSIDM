@@ -1,5 +1,7 @@
 # Parametric Model Analysis Tools for Self-Interacting Dark Matter Halos
 
+The parametric model for self-interacting dark matter (SIDM) halos allows for obtaining halo density profiles based on a few calibrated equations under an assumed SIDM model, using parameters from their CDM counterparts, such as NFW scale parameters or halo mass and concentration parameters. The effect of a baryon potential can be incorporated, assuming the density profile conforms to the Hernquist model.
+
 ### Relevant publications 
 
 - Dark matter-only version: D. Yang, E. O. Nadler, H.-B. Yu, and Y.-M. Zhong, [arXiv:2305.16176](https://arxiv.org/abs/2305.16176), published in [JCAP 02, 032 (2024)](http://dx.doi.org/10.1088/1475-7516/2024/02/032)
