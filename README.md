@@ -6,6 +6,9 @@
 - Dark matter plus baryon version: arXiv:24XX.XXXX
 - Our method has been implemented in the [SASHIMI program for SIDM subhalos](https://github.com/shinichiroando/sashimi-si): S. Ando, S. Horigome, E. O. Nadler, D. Yang, and H.-B. Yu, [arXiv:2403.16633](https://arxiv.org/abs/2403.16633)
 
+Our codes are free to copy and modify. If you find them useful, please quote our paper(s). 
+If you have any questions or comments, please contact [danengy_at_ucr.edu].
+
 ### Example applications
 
 - Plot the parametric SIDM density profile 
@@ -40,7 +43,4 @@ Run (`$ python getVRmaxplotISO.py`) will generate the following figure
    $ plotIntegralVmaxRmaxSIDMwithbaryon_SIDM_sigma0_100_w_100_DMO.py
    $ plotIntegralVmaxRmaxSIDMwithbaryon_SIDM_sigma0_100_w_100_total.py
    ```
-
-Our codes are free to copy and modify. If you find them useful, please quote our paper(s). 
-If you have any questions or comments, please contact [danengy_at_ucr.edu].
 
