@@ -58,10 +58,10 @@ fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 ax.plot_surface(np.log10(R), np.log10(TR), np.log10(Density), color='b',alpha=0.2, linewidth=0)
 
-ax.set_xlabel(r'$\log_{10}(r/r_s)$',fontsize=14)
-ax.set_ylabel(r'$\log_{10}(t/t_c)$',fontsize=14)
-ax.set_zlabel(r"$\log_{10}(\rho/\rho_s)$",fontsize=14)
+ax.set_xlabel(r'$\log_{10}(r/r_{s,0})$',fontsize=14)
+ax.set_ylabel(r'$\log_{10}(t/t_{c})$',fontsize=14)
+ax.set_zlabel(r"$\log_{10}(\rho/\rho_{s,0})$",fontsize=14)
 
 plt.show()
 
-fig.savefig('figs/demo.png', bbox_inches='tight')
+fig.savefig('figs/demo.png', bbox_inches='tight', pad_inches=0.4)
