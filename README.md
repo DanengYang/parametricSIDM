@@ -6,6 +6,7 @@ The parametric model for self-interacting dark matter (SIDM) halos allows for ob
 
 - Dark matter-only version: D. Yang, E. O. Nadler, H.-B. Yu, and Y.-M. Zhong, [arXiv:2305.16176](https://arxiv.org/abs/2305.16176), published in [JCAP 02, 032 (2024)](http://dx.doi.org/10.1088/1475-7516/2024/02/032)
 - Dark matter plus baryon version: D. Yang, [arXiv:2405.03787](https://arxiv.org/abs/2405.03787)
+- Testing the parametric model using matched halos in cosmological simulations: D. Yang, E. O. Nadler, and H.-B. Yu, [arXiv:2406.10753](http://arxiv.org/abs/2406.10753)
 - Our method has been implemented in the [SASHIMI program for SIDM subhalos](https://github.com/shinichiroando/sashimi-si): S. Ando, S. Horigome, E. O. Nadler, D. Yang, and H.-B. Yu, [arXiv:2403.16633](https://arxiv.org/abs/2403.16633)
 
 Our codes are free to copy and modify. If you find them useful, please quote our paper(s). 
@@ -45,4 +46,5 @@ Run (`$ python getVRmaxplotISO.py`) will generate the following figure
    $ plotIntegralVmaxRmaxSIDMwithbaryon_SIDM_sigma0_100_w_100_DMO.py
    $ plotIntegralVmaxRmaxSIDMwithbaryon_SIDM_sigma0_100_w_100_total.py
    ```
+- [Tutorial slides](https://github.com/DanengYang/parametricSIDM/blob/main/tutorial/A%20Quick%20Start%20for%20Working%20with%20SIDM%20Halos.pdf). Example scripts available under the tutorial folder. 
 
