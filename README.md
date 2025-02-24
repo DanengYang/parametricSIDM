@@ -4,11 +4,11 @@ The parametric model for self-interacting dark matter (SIDM) halos allows for ob
 
 ### Relevant works 
 
-- [1] Dark matter-only version: D. Yang, E. O. Nadler, H.-B. Yu, and Y.-M. Zhong, [arXiv:2305.16176](https://arxiv.org/abs/2305.16176), published in [JCAP 02, 032 (2024)](http://dx.doi.org/10.1088/1475-7516/2024/02/032)
-- [2] Dark matter plus baryon version: D. Yang, [arXiv:2405.03787](https://arxiv.org/abs/2405.03787), published in [Phys. Rev. D](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.110.103044)
-- [3] Testing the parametric model using matched halos in cosmological simulations: D. Yang, E. O. Nadler, and H.-B. Yu, [arXiv:2406.10753](http://arxiv.org/abs/2406.10753), published in [Phys. Dark Universe](https://www.sciencedirect.com/science/article/pii/S2212686425000020)
-- [4] For a lensing specific parametric model for SIDM halos, see S. Hou, D. Yang, N. Li, and G. Li, [arXiv:2502.14964](https://arxiv.org/abs/2502.14964), with [public codes on GitHub.](https://github.com/HouSiyuan2001/SIDM_Lensing_Model). 
-- [5] Our method has been implemented in the [SASHIMI program for SIDM subhalos](https://github.com/shinichiroando/sashimi-si): S. Ando, S. Horigome, E. O. Nadler, D. Yang, and H.-B. Yu, [arXiv:2403.16633](https://arxiv.org/abs/2403.16633)
+- [1] **Dark matter-only version**: D. Yang, E. O. Nadler, H.-B. Yu, and Y.-M. Zhong, [arXiv:2305.16176](https://arxiv.org/abs/2305.16176), published in [JCAP 02, 032 (2024)](http://dx.doi.org/10.1088/1475-7516/2024/02/032)
+- [2] **Dark matter plus baryon version**: D. Yang, [arXiv:2405.03787](https://arxiv.org/abs/2405.03787), published in [Phys. Rev. D](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.110.103044)
+- [3] **Testing** the parametric model using matched halos in **cosmological simulations**: D. Yang, E. O. Nadler, and H.-B. Yu, [arXiv:2406.10753](http://arxiv.org/abs/2406.10753), published in [Phys. Dark Universe](https://www.sciencedirect.com/science/article/pii/S2212686425000020)
+- [4] For a **lensing specific** parametric model for SIDM halos, see S. Hou, D. Yang, N. Li, and G. Li, [arXiv:2502.14964](https://arxiv.org/abs/2502.14964), with [public codes on GitHub.](https://github.com/HouSiyuan2001/SIDM_Lensing_Model). 
+- [5] Our method has been implemented in the [**SASHIMI program** for SIDM subhalos](https://github.com/shinichiroando/sashimi-si): S. Ando, S. Horigome, E. O. Nadler, D. Yang, and H.-B. Yu, [arXiv:2403.16633](https://arxiv.org/abs/2403.16633)
 
 
 Our codes are free to copy and modify. 
